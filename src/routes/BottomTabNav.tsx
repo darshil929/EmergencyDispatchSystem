@@ -7,7 +7,7 @@ import { Provider as PaperProvider, MD3LightTheme, MD3DarkTheme } from 'react-na
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Home from '../screens/Home';
-import Account from '../screens/Account';
+import Login from '../screens/Login';
 import Call from '../screens/Call';
 import Map from '../screens/Map';
 import NearMe from '../screens/NearMe';
@@ -68,7 +68,7 @@ export default function App() {
                         />
                         <Tab.Screen
                             name="Account"
-                            component={Account}
+                            component={Login}
                             options={{
                                 tabBarIcon: ({ color }) => (
                                     <MaterialCommunityIcons name="account" color={color} size={26} />
