@@ -18,57 +18,57 @@ import NearMe from '../screens/NearMe';
 const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
-  return (
-    <Provider>
-      <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen
-            name="NearMe"
-            component={NearMe}
-            options={{
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="near-me" color={color} size={26} />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Map"
-            component={Map}
-            options={{
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="map-marker" color={color} size={26} />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Home"
-            component={Home}
-            options={{
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="home" color={color} size={26} />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Call"
-            component={Call}
-            options={{
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="phone" color={color} size={26} />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Account"
-            component={Account}
-            options={{
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="account" color={color} size={26} />
-              ),
-            }}
-          />
-        </Tab.Navigator>
-      </NavigationContainer>
-    </Provider>
-  );
+    return (
+        <Provider>
+            <NavigationContainer>
+                <Tab.Navigator>
+                    <Tab.Screen
+                        name="NearMe"
+                        component={NearMe}
+                        options={{
+                            tabBarIcon: ({ color }) => (
+                                <MaterialCommunityIcons name="near-me" color={color} size={26} />
+                            ),
+                        }}
+                    />
+                    <Tab.Screen
+                        name="Map"
+                        component={Map}
+                        options={{
+                            tabBarIcon: ({ color }) => (
+                                <MaterialCommunityIcons name="map-marker" color={color} size={26} />
+                            ),
+                        }}
+                    />
+                    <Tab.Screen
+                        name="Home"
+                        component={Home}
+                        options={{
+                            tabBarIcon: ({ color }) => (
+                                <MaterialCommunityIcons name="home" color={color} size={26} />
+                            ),
+                        }}
+                    />
+                    <Tab.Screen
+                        name="Call"
+                        component={Call}
+                        options={{
+                            tabBarIcon: ({ color }) => (
+                                <MaterialCommunityIcons name="phone" color={color} size={26} />
+                            ),
+                        }}
+                    />
+                    <Tab.Screen
+                        name="Account"
+                        component={Account}
+                        options={{
+                            tabBarIcon: ({ color }) => (
+                                <MaterialCommunityIcons name="account" color={color} size={26} />
+                            ),
+                        }}
+                    />
+                </Tab.Navigator>
+            </NavigationContainer>
+        </Provider>
+    );
 }
