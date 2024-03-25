@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-import BottomTabNav from './routes/BottomTabNav'
-
-const App = () => {
+const Signup = () => {
   return (
-    <BottomTabNav />
+    <View>
+      <Text>Signup</Text>
+    </View>
   )
 }
 
-export default App
+export default Signup
 
 const styles = StyleSheet.create({})
