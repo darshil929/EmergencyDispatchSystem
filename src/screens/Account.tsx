@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
+import { CustomHeader } from '../components/CustomHeader'
+
 const Account = () => {
   return (
-    <View>
-      <Text>Account</Text>
-    </View>
+    <CustomHeader />
   )
 }
 
