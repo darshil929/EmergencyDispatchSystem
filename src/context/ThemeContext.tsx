@@ -4,4 +4,4 @@ interface ThemeContextProps {
     toggleTheme: () => void;
 }
 
-export const ThemeContext = React.createContext<ThemeContextProps>({ toggleTheme: () => { } });
+export const ThemeContext = React.createContext<ThemeContextProps>({ toggleTheme: () => {} });

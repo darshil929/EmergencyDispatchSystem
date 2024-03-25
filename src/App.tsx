@@ -7,19 +7,8 @@ import BottomTabNav from './routes/BottomTabNav';
 import { ThemeContext } from './context/ThemeContext';
 
 const App: React.FC = () => {
-  const [colorScheme, setColorScheme] = useState(useColorScheme());
-  const paperTheme = MD3LightTheme;
-
-  const toggleTheme = () => {
-    setColorScheme(colorScheme === "dark" ? "light" : "dark");
-  };
-
   return (
-    <PaperProvider theme={paperTheme}>
-      <ThemeContext.Provider value={{ toggleTheme }}>
-        <BottomTabNav />
-      </ThemeContext.Provider>
-    </PaperProvider>
+    <BottomTabNav />
   );
 };
 
