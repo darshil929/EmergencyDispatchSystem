@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ThemeContextProps {
-    toggleTheme: () => any;
+    toggleTheme: () => void;
 }
 
-export const ThemeContext = React.createContext<ThemeContextProps>({ toggleTheme: () => { } });
+export const ThemeContext = React.createContext<ThemeContextProps>({ toggleTheme: () => {} });

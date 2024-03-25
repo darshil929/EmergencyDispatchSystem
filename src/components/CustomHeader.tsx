@@ -9,10 +9,13 @@ interface Props {
 
 export const CustomHeader: React.FC<Props> = ({ navigation }) => {
   const route = useRoute();
-  const { toggleTheme }: any = useContext(ThemeContext);
+  const { toggleTheme } = useContext(ThemeContext);
 
   return (
-    <Appbar.Header mode="center-aligned" elevated={true}>
+    <Appbar.Header
+      mode="center-aligned"
+      elevated={true}
+    >
       <Appbar.Action
         icon="theme-light-dark"
         onPress={toggleTheme}

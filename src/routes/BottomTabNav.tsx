@@ -3,9 +3,8 @@ import React, { useState } from 'react'
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from "react-native-paper/react-navigation";
-import { Provider, MD3DarkTheme, MD3LightTheme, PaperProvider } from 'react-native-paper';
+import { Provider as PaperProvider, MD3LightTheme, MD3DarkTheme } from 'react-native-paper';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
 
 import Home from '../screens/Home';
 import Account from '../screens/Account';
@@ -26,7 +25,7 @@ export default function App() {
 
     return (
         <PaperProvider theme={paperTheme}>
-            <ThemeContext.Provider value={toggleTheme}>
+            <ThemeContext.Provider value={{ toggleTheme }}>
                 <NavigationContainer>
                     <Tab.Navigator
                         initialRouteName='Home'
