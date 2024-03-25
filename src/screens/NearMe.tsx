@@ -3,9 +3,9 @@ import React from 'react'
 
 import { CustomHeader } from '../components/CustomHeader'
 
-const NearMe = () => {
+const NearMe = (props: any) => {
   return (
-    <CustomHeader />
+    <CustomHeader {...props}/>
   )
 }
 

@@ -3,9 +3,9 @@ import React from 'react'
 
 import { CustomHeader } from '../components/CustomHeader'
 
-const Home = () => {
+const Home = (props: any) => {
   return (
-    <CustomHeader />
+    <CustomHeader {...props}/>
   )
 }
 
