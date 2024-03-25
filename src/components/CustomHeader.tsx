@@ -20,7 +20,8 @@ export const CustomHeader: React.FC<Props> = ({ navigation }) => {
         icon="theme-light-dark"
         onPress={toggleTheme}
       />
-      <Appbar.Content title={route.name} />
+      <Appbar.Content title='JanRakshak'/>
+      {/* <Appbar.Content title={route.name} /> */}
       <Appbar.Action icon="phone" onPress={() => console.log('call')} />
     </Appbar.Header>
   );
