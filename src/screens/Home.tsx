@@ -1,13 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-
+import { CustomHeader } from '../components/CustomHeader'
 
 const Home = () => {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <CustomHeader />
   )
 }
 

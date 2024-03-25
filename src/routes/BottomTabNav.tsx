@@ -13,15 +13,15 @@ import Call from '../screens/Call';
 import Map from '../screens/Map';
 import NearMe from '../screens/NearMe';
 
-
-
 const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
     return (
         <Provider>
             <NavigationContainer>
-                <Tab.Navigator>
+                <Tab.Navigator 
+                initialRouteName='Home'
+                >
                     <Tab.Screen
                         name="NearMe"
                         component={NearMe}
