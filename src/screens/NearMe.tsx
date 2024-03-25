@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-import BottomTabNav from './routes/BottomTabNav'
-
-const App = () => {
+const NearMe = () => {
   return (
-    <BottomTabNav />
+    <View>
+      <Text>NearMe</Text>
+    </View>
   )
 }
 
-export default App
+export default NearMe
 
 const styles = StyleSheet.create({})
