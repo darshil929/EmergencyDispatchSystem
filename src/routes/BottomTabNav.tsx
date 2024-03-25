@@ -19,8 +19,8 @@ export default function App() {
     return (
         <Provider>
             <NavigationContainer>
-                <Tab.Navigator 
-                initialRouteName='Home'
+                <Tab.Navigator
+                    initialRouteName='Home'
                 >
                     <Tab.Screen
                         name="NearMe"
