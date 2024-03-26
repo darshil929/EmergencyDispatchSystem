@@ -21,7 +21,7 @@ import merge from 'deepmerge';
 
 import JanRakshak from '../screens/JanRakshak';
 import Account from '../screens/Account';
-import Call from '../screens/Call';
+import FakeCall from '../screens/FakeCall';
 import Map from '../screens/Map';
 import NearMe from '../screens/NearMe';
 import { ThemeContext } from '../context/ThemeContext';
@@ -53,7 +53,7 @@ export default function App() {
                         initialRouteName='JanRakshak'
                     >
                         <Tab.Screen
-                            name="NearMe"
+                            name="Near Me"
                             component={NearMe}
                             options={{
                                 tabBarIcon: ({ color }) => (
@@ -80,8 +80,8 @@ export default function App() {
                             }}
                         />
                         <Tab.Screen
-                            name="Call"
-                            component={Call}
+                            name="Fake Call"
+                            component={FakeCall}
                             options={{
                                 tabBarIcon: ({ color }) => (
                                     <MaterialCommunityIcons name="phone" color={color} size={26} />

@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, View, Image, ScrollView } from 'react-native'
 import React from 'react'
 
-import { Text, Surface } from 'react-native-paper'
+import { Text, Surface, TouchableRipple } from 'react-native-paper'
 
 import { CustomHeader } from '../components/CustomHeader'
 import { nearByService } from '../constants/constants'
@@ -9,28 +9,31 @@ import { nearByService } from '../constants/constants'
 const NearMe = ({ props }: any) => {
   return (
     <>
-      <ScrollView>
-        <CustomHeader {...props} />
+      <CustomHeader {...props} />
         <View style={styles.container}>
           <Text style={styles.header}>Near By Services</Text>
-          <View>
+          <ScrollView>
             <FlatList
               numColumns={2}
               data={nearByService}
               keyExtractor={item => item.id}
               renderItem={({ item }) => (
-                <Surface
-                  style={styles.card}
-                  elevation={3}
+                <TouchableRipple
+                  onPress={item.onPress}
+                  rippleColor="rgba(0, 0, 0, .32)"
                 >
-                  <Image source={item.imgUrl} style={styles.image} />
-                  <Text>{item.name}</Text>
-                </Surface>
+                  <Surface
+                    style={styles.card}
+                    elevation={3}
+                  >
+                    <Image source={item.imgUrl} style={styles.image} />
+                    <Text>{item.name}</Text>
+                  </Surface>
+                </TouchableRipple>
               )}
             />
-          </View>
+          </ScrollView>
         </View>
-      </ScrollView>
     </>
   )
 }
@@ -48,12 +51,12 @@ const styles = StyleSheet.create({
     marginVertical: 16,
   },
   card: {
-    height: 150,
-    width: 150,
+    height: 160,
+    width: 160,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    margin: 16
+    margin: 12
   },
   image: {
     height: 90,

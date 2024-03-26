@@ -4,4 +4,5 @@ interface NearByService {
     id: string
     name: string
     imgUrl: ImageSourcePropType
+    onPress: () => void
 }
