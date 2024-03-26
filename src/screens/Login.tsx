@@ -53,7 +53,7 @@ const Login = ({ navigation }: LoginScreenProps) => {
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
-      >
+    >
       <View style={styles.formContainer}>
         <Text style={styles.appName}>JanRakshak</Text>
 
@@ -71,8 +71,8 @@ const Login = ({ navigation }: LoginScreenProps) => {
 
         {/* Password */}
         <TextInput
-        mode="outlined"
-        label="password"
+          mode="outlined"
+          label="password"
           value={password}
           onChangeText={text => setPassword(text)}
           placeholderTextColor={'#AEAEAE'}
@@ -86,9 +86,9 @@ const Login = ({ navigation }: LoginScreenProps) => {
 
         {/* Login button */}
         <Button
-        mode='contained-tonal'
+          mode='contained-tonal'
           onPress={handleLogin}
-          style={[{ marginTop: error ? 10 : 20 }, {marginHorizontal: 32}]}>
+          style={[{ marginTop: error ? 10 : 20 }, { marginHorizontal: 32 }]}>
           <Text style={styles.btnText}>Login</Text>
         </Button>
 
