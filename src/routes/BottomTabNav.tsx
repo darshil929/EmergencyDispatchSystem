@@ -50,7 +50,7 @@ export default function App() {
             <ThemeContext.Provider value={{ toggleTheme }}>
                 <NavigationContainer theme={paperTheme}>
                     <Tab.Navigator
-                        initialRouteName='JanRakshak'
+                        initialRouteName='Home'
                         // labeled={false}
                     >
                         <Tab.Screen
