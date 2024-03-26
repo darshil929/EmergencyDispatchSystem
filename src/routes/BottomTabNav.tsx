@@ -1,10 +1,23 @@
 import { View, Text, useColorScheme } from 'react-native'
 import React, { useState } from 'react'
 
-import { NavigationContainer } from '@react-navigation/native';
+import {
+    NavigationContainer,
+    DarkTheme as NavigationDarkTheme,
+    DefaultTheme as NavigationDefaultTheme,
+} from '@react-navigation/native';
+
 import { createMaterialBottomTabNavigator } from "react-native-paper/react-navigation";
-import { Provider as PaperProvider, MD3LightTheme, MD3DarkTheme } from 'react-native-paper';
+import {
+    Provider as PaperProvider,
+    MD3LightTheme,
+    MD3DarkTheme,
+    adaptNavigationTheme
+} from 'react-native-paper';
+
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import merge from 'deepmerge';
 
 import JanRakshak from '../screens/JanRakshak';
 import Account from '../screens/Account';
@@ -16,8 +29,17 @@ import { ThemeContext } from '../context/ThemeContext';
 const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
+    //combine themeing for navigation and default
+    const { LightTheme, DarkTheme } = adaptNavigationTheme({
+        reactNavigationLight: NavigationDefaultTheme,
+        reactNavigationDark: NavigationDarkTheme,
+    });
+
+    const CombinedDefaultTheme = merge(MD3LightTheme, LightTheme);
+    const CombinedDarkTheme = merge(MD3DarkTheme, DarkTheme);
+
     const [colorScheme, setColorScheme] = useState(useColorScheme());
-    const paperTheme = colorScheme === "dark" ? MD3DarkTheme : MD3LightTheme;
+    const paperTheme = colorScheme === "dark" ? CombinedDarkTheme : CombinedDefaultTheme;
 
     const toggleTheme = () => {
         setColorScheme(colorScheme === "dark" ? "light" : "dark");
@@ -26,7 +48,7 @@ export default function App() {
     return (
         <PaperProvider theme={paperTheme}>
             <ThemeContext.Provider value={{ toggleTheme }}>
-                <NavigationContainer>
+                <NavigationContainer theme={paperTheme}>
                     <Tab.Navigator
                         initialRouteName='JanRakshak'
                     >
