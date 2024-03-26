@@ -3,9 +3,9 @@ import React from 'react'
 
 import { CustomHeader } from '../components/CustomHeader'
 
-const JanRakshak = () => {
+const JanRakshak = ({props}: any) => {
   return (
-    <CustomHeader />
+    <CustomHeader {...props}/>
   )
 }
 

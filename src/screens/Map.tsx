@@ -3,9 +3,9 @@ import React from 'react'
 
 import { CustomHeader } from '../components/CustomHeader'
 
-const Map = () => {
+const Map = ({props}: any) => {
   return (
-    <CustomHeader />
+    <CustomHeader {...props}/>
   )
 }
 
