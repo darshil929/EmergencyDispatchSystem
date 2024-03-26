@@ -56,10 +56,10 @@ class AppwriteService {
         try {
             return await this.account.createEmailPasswordSession(email, password)
         } catch (error) {
-            Snackbar.show({
-                text: String(error),
-                duration: Snackbar.LENGTH_LONG
-            })
+            // Snackbar.show({
+            //     text: String(error),
+            //     duration: Snackbar.LENGTH_LONG
+            // })
             console.log("Appwrite service :: loginAccount() :: " + error);    
         }
     }
@@ -68,10 +68,10 @@ class AppwriteService {
         try {
             return await this.account.get()
         } catch (error) {
-            Snackbar.show({
-                text: String(error),
-                duration: Snackbar.LENGTH_LONG
-            })
+            // Snackbar.show({
+            //     text: String(error),
+            //     duration: Snackbar.LENGTH_LONG
+            // })
             console.log("Appwrite service :: getCurrentAccount() :: " + error);
         }
     }
