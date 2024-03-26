@@ -12,7 +12,7 @@ const NearMe = ({ props }: any) => {
       <CustomHeader {...props} />
         <View style={styles.container}>
           <Text style={styles.header}>Near By Services</Text>
-          <ScrollView>
+          <ScrollView showsVerticalScrollIndicator={false}>
             <FlatList
               numColumns={2}
               data={nearByService}
