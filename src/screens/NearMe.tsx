@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, View, Image } from 'react-native'
+import { FlatList, StyleSheet, View, Image, ScrollView } from 'react-native'
 import React from 'react'
 
 import { Text, Surface } from 'react-native-paper'
@@ -9,26 +9,28 @@ import { nearByService } from '../constants/constants'
 const NearMe = ({ props }: any) => {
   return (
     <>
-      <CustomHeader {...props} />
-      <View style={styles.container}>
-        <Text style={styles.header}>Near By Services</Text>
-        <View>
-          <FlatList
-            numColumns={2}
-            data={nearByService}
-            keyExtractor={item => item.id}
-            renderItem={({ item }) => (
-              <Surface
-                style={styles.card}
-                elevation={3}
-              >
-                <Image source={item.imgUrl} style={styles.image} />
-                <Text>{item.name}</Text>
-              </Surface>
-            )}
-          />
+      <ScrollView>
+        <CustomHeader {...props} />
+        <View style={styles.container}>
+          <Text style={styles.header}>Near By Services</Text>
+          <View>
+            <FlatList
+              numColumns={2}
+              data={nearByService}
+              keyExtractor={item => item.id}
+              renderItem={({ item }) => (
+                <Surface
+                  style={styles.card}
+                  elevation={3}
+                >
+                  <Image source={item.imgUrl} style={styles.image} />
+                  <Text>{item.name}</Text>
+                </Surface>
+              )}
+            />
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </>
   )
 }
