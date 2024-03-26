@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
-import { StyleSheet, useColorScheme } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { Provider as PaperProvider, MD3DarkTheme, MD3LightTheme } from 'react-native-paper';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 
 import BottomTabNav from './routes/BottomTabNav';
-import { ThemeContext } from './context/ThemeContext';
 
 const App: React.FC = () => {
   return (

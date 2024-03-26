@@ -1,7 +1,7 @@
 import { StyleSheet, View, KeyboardAvoidingView, Pressable, Platform } from 'react-native'
 import React, { useContext, useState } from 'react'
 
-import { Text, TextInput, Button } from 'react-native-paper'
+import { Text, TextInput, Button, Surface } from 'react-native-paper'
 
 //Snackbar
 import Snackbar from 'react-native-snackbar'
@@ -51,7 +51,7 @@ const Login = ({ navigation }: LoginScreenProps) => {
 
   return (
     <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      // behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
     >
       <View style={styles.formContainer}>

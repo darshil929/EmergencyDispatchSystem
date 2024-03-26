@@ -90,7 +90,6 @@ const styles = StyleSheet.create({
   },
   welcomeContainer: {
     padding: 12,
-
     flex: 1,
     alignItems: 'center',
   },

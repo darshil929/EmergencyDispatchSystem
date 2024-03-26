@@ -36,8 +36,8 @@ export const Router = () => {
     }
     
   return (
-    <NavigationContainer independent={true}>
-        {isLoggedIn ? <AppStack /> : <AuthStack />}
-    </NavigationContainer>
+    <>
+      {isLoggedIn ? <AppStack /> : <AuthStack />}
+    </>
   )
 }
