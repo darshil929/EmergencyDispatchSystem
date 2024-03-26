@@ -6,7 +6,7 @@ import { createMaterialBottomTabNavigator } from "react-native-paper/react-navig
 import { Provider as PaperProvider, MD3LightTheme, MD3DarkTheme } from 'react-native-paper';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import Home from '../screens/Home';
+import JanRakshak from '../screens/JanRakshak';
 import Account from '../screens/Account';
 import Call from '../screens/Call';
 import Map from '../screens/Map';
@@ -28,7 +28,7 @@ export default function App() {
             <ThemeContext.Provider value={{ toggleTheme }}>
                 <NavigationContainer>
                     <Tab.Navigator
-                        initialRouteName='Home'
+                        initialRouteName='JanRakshak'
                     >
                         <Tab.Screen
                             name="NearMe"
@@ -49,8 +49,8 @@ export default function App() {
                             }}
                         />
                         <Tab.Screen
-                            name="Home"
-                            component={Home}
+                            name="JanRakshak"
+                            component={JanRakshak}
                             options={{
                                 tabBarIcon: ({ color }) => (
                                     <MaterialCommunityIcons name="home" color={color} size={26} />
