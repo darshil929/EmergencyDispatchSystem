@@ -51,6 +51,7 @@ export default function App() {
                 <NavigationContainer theme={paperTheme}>
                     <Tab.Navigator
                         initialRouteName='JanRakshak'
+                        // labeled={false}
                     >
                         <Tab.Screen
                             name="Near Me"
@@ -71,7 +72,7 @@ export default function App() {
                             }}
                         />
                         <Tab.Screen
-                            name="JanRakshak"
+                            name="Home"
                             component={JanRakshak}
                             options={{
                                 tabBarIcon: ({ color }) => (
