@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-import { CustomHeader } from '../components/CustomHeader'
+import { Router } from '../routes/Router';
+import { AppwriteProvider } from '../appwrite/AppwriteContext';
+
+
 
 const Account = () => {
   return (
-    <CustomHeader />
+    <AppwriteProvider>
+      <Router />
+    </AppwriteProvider>
   )
 }
 
 export default Account
-
-const styles = StyleSheet.create({})
